@@ -5,7 +5,7 @@
 ## Group Members
 
 | Names                         |     ID      |
-| ------------------------------|: ----------:|
+| ----------------------------- | ----------- |
 | Anansi Sime                   | UGR/9691/15 |
 | Kibruyisfa Lemma              | UGR/9408/15 |
 | Sumeya Ibrahim                | UGR/6702/15 |
