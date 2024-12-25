@@ -18,29 +18,29 @@ The Doctor Appointment Booking System is a web-based application designed to str
 
 ### For patients
 - **Appointment Bookings:**
-   • Patients can make new doctor appointment bookings.
-   • Patients can edit their booking details, such as the date, time, and description of the visit.
-   • Users can cancel their bookings.
-   • Patients can view their upcoming and past appointments.
+   - Patients can make new doctor appointment bookings.
+   - Patients can edit their booking details, such as the date, time, and description of the visit.
+   - Users can cancel their bookings.
+   - Patients can view their upcoming and past appointments.
 
 ### For Doctors
 - **Schedule management:**
-  • Doctors can view their appointment schedules.
-  • Doctors can manage their availability by setting working hours.
-  • Doctors can confirm or reschedule appointments as needed.
+   - Doctors can view their appointment schedules.
+   - Doctors can manage their availability by setting working hours.
+   - Doctors can confirm or reschedule appointments as needed.
 
 ### For Admins
 - **User Management:**
-  • Admins can manage patient and doctor accounts, including adding or removing users.
-  • Admins can monitor appointment statistics and system usage.
+   - Admins can manage patient and doctor accounts, including adding or removing users.
+   - Admins can monitor appointment statistics and system usage.
 
   
 ## We choose MongoDB for our project over other relational databases because : 
 
-  • Flexible Schema: MongoDB's document-oriented structure allows us to store data in a flexible format. This is particularly useful for handling diverse data types related to appointments,     patients, and doctors without the need for a fixed schema.
-  • Scalability: As our application grows, MongoDB provides horizontal scaling capabilities, making it easier to handle increased data loads and user traffic.
-  • Rich Querying: MongoDB supports powerful querying capabilities, allowing us to efficiently retrieve and manipulate data based on various criteria (e.g., finding available doctors, retrieving patient appointment history).
-  • JSON-like Documents: The use of BSON (Binary JSON) format makes it easier to work with data structures that mirror the objects used in our application code.
+  - Flexible Schema: MongoDB's document-oriented structure allows us to store data in a flexible format. This is particularly useful for handling diverse data types related to appointments,     patients, and doctors without the need for a fixed schema.
+  - Scalability: As our application grows, MongoDB provides horizontal scaling capabilities, making it easier to handle increased data loads and user traffic.
+  - Rich Querying: MongoDB supports powerful querying capabilities, allowing us to efficiently retrieve and manipulate data based on various criteria (e.g., finding available doctors, retrieving patient appointment history).
+  - JSON-like Documents: The use of BSON (Binary JSON) format makes it easier to work with data structures that mirror the objects used in our application code.
 
 
 ▎Usage
