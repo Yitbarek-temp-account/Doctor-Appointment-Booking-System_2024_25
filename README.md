@@ -1,7 +1,5 @@
 # Doctor-Appointment-Booking-System
 
-## Section 1
-
 ## Group Members
 
 | Names                         |     ID      |
