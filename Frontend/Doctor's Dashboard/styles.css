@@ -1,0 +1,1013 @@
+/* Custom Colors and Typography */
+:root {
+    /* Main colors */
+    --teal: #20c997;
+    --teal-light: #f0f9f7;
+    --teal-dark: #0ca678;
+    --danger-soft: #ffd6d6;
+    --primary: #0d6efd;
+    --white: #ffffff;
+    --card-bg: #ffffff;
+    --card-shadow: rgba(0, 0, 0, 0.08);
+
+    /* Text colors */
+    --text-dark: #1a2024;
+    --text-medium: #495057;
+    --text-light: #868e96;
+    --text-muted: #6c757d;
+
+    /* Link colors */
+    --link-color: #0ca678;
+    --link-hover: #099268;
+
+    /* Font sizes */
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.25rem;
+    --text-2xl: 1.5rem;
+    --text-3xl: 1.875rem;
+}
+
+/* Base Typography */
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: var(--text-base);
+    line-height: 1.5;
+    color: var(--text-dark);
+    -webkit-font-smoothing: antialiased;
+    background-color: var(--teal-light);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: var(--text-3xl);
+    letter-spacing: -0.02em;
+}
+
+h2 {
+    font-size: var(--text-2xl);
+    letter-spacing: -0.01em;
+}
+
+h3 {
+    font-size: var(--text-xl);
+}
+
+/* Header Styles */
+.navbar {
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: var(--white) !important;
+}
+
+.navbar-brand {
+    font-family: 'Poppins', sans-serif;
+    font-size: var(--text-2xl);
+    font-weight: 700;
+    color: var(--teal-dark) !important;
+}
+
+/* Custom Button Styles */
+.btn {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: var(--text-sm);
+    letter-spacing: 0.3px;
+}
+
+.btn-teal {
+    background-color: var(--teal-dark);
+    color: var(--white);
+    border: none;
+    padding: 0.5rem 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn-teal:hover {
+    background-color: var(--link-hover);
+    color: var(--white);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-danger-soft {
+    background-color: var(--danger-soft);
+    color: #dc3545;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn-danger-soft:hover {
+    background-color: #ffc2c2;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Styles */
+.card {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 0 20px var(--card-shadow);
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.12);
+}
+
+.card-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: var(--text-xl);
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+}
+
+/* Doctor Details Styling */
+.doctor-details {
+    padding: 1rem 0;
+}
+
+.detail-item {
+    margin-bottom: 1.5rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--teal-light);
+}
+
+.detail-item:last-child {
+    border-bottom: none;
+}
+
+.detail-item label {
+    font-family: 'Inter', sans-serif;
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--text-medium);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.detail-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.detail-content span {
+    font-size: var(--text-base);
+    color: var(--text-dark);
+    font-weight: 400;
+    flex-grow: 1;
+}
+
+/* Edit Button Styles */
+.btn-edit {
+    padding: 0.25rem 0.5rem;
+    color: var(--teal-dark);
+    background: none;
+    border: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-edit:hover {
+    color: var(--link-hover);
+    transform: scale(1.1);
+}
+
+/* Profile Image Container Styles */
+.profile-image-container {
+    position: relative;
+    display: inline-block;
+    margin: 1rem 0;
+}
+
+.profile-image-container img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--white);
+    box-shadow: 0 0 20px rgba(32, 201, 151, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.profile-image-container:hover img {
+    transform: scale(1.02);
+}
+
+.btn-edit-image {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: var(--teal-dark);
+    color: var(--white);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    padding: 0;
+}
+
+.btn-edit-image:hover {
+    transform: scale(1.1);
+    background-color: var(--link-hover);
+    color: var(--white);
+}
+
+/* Sidebar Styles */
+.sidebar-overlay,
+.sidebar,
+.btn-close-sidebar {
+    display: none;
+}
+
+/* Modal Styles */
+.modal-content {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+    border-bottom: 1px solid var(--teal-light);
+    padding: 1rem 1.5rem;
+    background-color: var(--teal-light);
+    border-radius: 15px 15px 0 0;
+}
+
+.modal-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: var(--text-lg);
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.modal-body {
+    padding: 1.5rem;
+}
+
+.modal-footer {
+    border-top: 1px solid var(--teal-light);
+    padding: 1rem 1.5rem;
+}
+
+/* Form Controls */
+.form-control {
+    font-family: 'Inter', sans-serif;
+    font-size: var(--text-base);
+    color: var(--text-dark);
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+    padding: 0.75rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #20c997;
+    box-shadow: 0 0 0 0.25rem rgba(32, 201, 151, 0.25);
+}
+
+/* Appointment Page Specific Styles */
+.appointments-table {
+    margin-bottom: 0;
+}
+
+.appointments-table th {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    color: var(--text-dark);
+    border-bottom: 2px solid var(--teal-light);
+    padding: 1rem;
+}
+
+.appointments-table td {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-dark);
+    vertical-align: middle;
+    padding: 1rem;
+}
+
+/* Status Badge Styles */
+.status-badge {
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: var(--text-sm);
+    font-weight: 500;
+}
+
+.status-upcoming {
+    background-color: rgba(32, 201, 151, 0.1);
+    color: var(--teal-dark);
+}
+
+.status-completed {
+    background-color: rgba(108, 117, 125, 0.1);
+    color: var(--text-medium);
+}
+
+.status-cancelled {
+    background-color: rgba(220, 53, 69, 0.1);
+    color: #dc3545;
+}
+
+/* Action Buttons */
+.btn-action {
+    padding: 0.5rem;
+    color: var(--text-medium);
+    background: none;
+    border: none;
+    transition: all 0.3s ease;
+    margin: 0 0.25rem;
+}
+
+.btn-action:hover {
+    color: var(--teal-dark);
+    transform: translateY(-1px);
+}
+
+.btn-action.cancel:hover {
+    color: #dc3545;
+}
+
+/* Filter Section Styles */
+.form-label {
+    font-family: 'Inter', sans-serif;
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--text-medium);
+    margin-bottom: 0.5rem;
+}
+
+/* Date Range Picker Custom Styles */
+.flatpickr-input {
+    background-color: var(--white) !important;
+}
+
+.flatpickr-calendar {
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border: none;
+}
+
+.flatpickr-day.selected {
+    background: var(--teal-dark);
+    border-color: var(--teal-dark);
+}
+
+.flatpickr-day.selected:hover {
+    background: var(--teal);
+    border-color: var(--teal);
+}
+
+/* Pagination Custom Styles */
+.pagination {
+    margin-bottom: 0;
+}
+
+.page-link {
+    color: var(--text-medium);
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 0 0.25rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.page-link:hover {
+    color: var(--teal-dark);
+    background-color: var(--teal-light);
+    transform: translateY(-1px);
+}
+
+.page-item.active .page-link {
+    background-color: var(--teal-dark);
+    color: var(--white);
+}
+
+/* Modal Custom Styles for Appointments */
+.patient-details .detail-item {
+    margin-bottom: 1rem;
+}
+
+.patient-details .detail-item:last-child {
+    margin-bottom: 0;
+}
+
+.patient-details label {
+    font-weight: 500;
+    color: var(--text-medium);
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.patient-details span,
+.patient-details p {
+    color: var(--text-dark);
+    font-size: var(--text-base);
+}
+
+/* Empty State Styles */
+#emptyState i {
+    color: var(--text-light);
+}
+
+/* Loading Spinner Custom Colors */
+.spinner-border.text-teal {
+    color: var(--teal-dark);
+}
+
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    :root {
+        --text-3xl: 1.5rem;
+        --text-2xl: 1.25rem;
+        --text-xl: 1.125rem;
+        --text-lg: 1rem;
+    }
+
+    .navbar-brand {
+        font-size: var(--text-xl);
+    }
+
+    .detail-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .profile-image-container img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .btn-edit-image {
+        width: 35px;
+        height: 35px;
+    }
+
+    /* Sidebar Styles for Mobile */
+    .sidebar-overlay {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(2px);
+        z-index: 1040;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .sidebar {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: -280px;
+        width: 280px;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        z-index: 1050;
+        transition: all 0.3s ease;
+        padding: 1rem;
+    }
+
+    .sidebar-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 0;
+        border-bottom: 1px solid var(--teal-light);
+        margin-bottom: 1rem;
+    }
+
+    .btn-close-sidebar {
+        display: block;
+        background: none;
+        border: none;
+        color: var(--text-medium);
+        font-size: var(--text-xl);
+        cursor: pointer;
+        padding: 0.5rem;
+        transition: all 0.3s ease;
+    }
+
+    .sidebar-menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .sidebar-menu li {
+        margin-bottom: 0.5rem;
+    }
+
+    .sidebar-menu a {
+        display: flex;
+        align-items: center;
+        padding: 0.75rem 1rem;
+        color: var(--text-medium);
+        text-decoration: none;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+
+    .sidebar-menu a i {
+        margin-right: 1rem;
+        width: 20px;
+        text-align: center;
+    }
+
+    .sidebar-menu a:hover {
+        background: var(--teal-light);
+        color: var(--teal-dark);
+    }
+
+    .sidebar-menu a.active {
+        background: var(--teal-dark);
+        color: var(--white);
+    }
+
+    /* Show sidebar when active */
+    .sidebar.active {
+        left: 0;
+    }
+
+    .sidebar-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .appointments-table thead {
+        display: none;
+    }
+
+    .appointments-table tbody tr {
+        display: block;
+        border-bottom: 1px solid var(--teal-light);
+        padding: 1rem 0;
+    }
+
+    .appointments-table tbody tr:last-child {
+        border-bottom: none;
+    }
+
+    .appointments-table td {
+        display: block;
+        padding: 0.5rem 0;
+        border: none;
+    }
+
+    .appointments-table td:before {
+        content: attr(data-label);
+        font-weight: 500;
+        color: var(--text-medium);
+        display: block;
+        font-size: var(--text-sm);
+        margin-bottom: 0.25rem;
+    }
+
+    /* Adjust filter section on mobile */
+    .filter-section {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .filter-section>div {
+        width: 100%;
+    }
+
+    /* Adjust action buttons spacing */
+    .btn-action {
+        padding: 0.75rem;
+        margin: 0 0.5rem;
+    }
+
+    /* Make status badges full width */
+    .status-badge {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+}
+
+/* Additional Utility Classes */
+.text-muted {
+    color: var(--text-muted) !important;
+}
+
+.shadow-sm {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.075) !important;
+}
+
+.rounded-circle {
+    border-radius: 50% !important;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Refresh Button Animation */
+
+
+.refreshing {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Form Controls and Dropdowns */
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--teal) !important;
+    box-shadow: 0 0 0 0.25rem rgba(32, 201, 151, 0.25) !important;
+}
+
+.form-select {
+    color: var(--text-dark) !important;
+}
+
+.form-select option {
+    background-color: var(--white);
+    color: var(--text-dark);
+}
+
+.form-select option:hover,
+.form-select option:focus,
+.form-select option:active,
+.form-select option:checked {
+    background: var(--teal) !important;
+    background-color: var(--teal) !important;
+    color: var(--white) !important;
+}
+
+/* Dropdown Options Hover State */
+select.form-select option:hover,
+select.form-select option:focus,
+select.form-select option:active,
+select.form-select option:checked,
+select.form-select option:selected {
+    background: var(--teal) !important;
+    background-color: var(--teal) !important;
+    color: white !important;
+}
+
+/* Override Bootstrap's default focus color */
+.form-select:focus,
+.form-control:focus {
+    border-color: var(--teal) !important;
+    box-shadow: 0 0 0 0.25rem rgba(32, 201, 151, 0.25) !important;
+}
+
+/* Override any Bootstrap hover states */
+.form-select option:hover {
+    background: var(--teal) !important;
+    background-color: var(--teal) !important;
+    color: white !important;
+}
+
+/* Date Picker Styling */
+.flatpickr-day.selected,
+.flatpickr-day.startRange,
+.flatpickr-day.endRange,
+.flatpickr-day.selected.inRange {
+    background: var(--teal) !important;
+    border-color: var(--teal) !important;
+}
+
+.flatpickr-day.inRange,
+.flatpickr-day:hover {
+    background: var(--teal-light) !important;
+    border-color: var(--teal-light) !important;
+}
+
+/* Pagination Styles */
+.pagination .page-link {
+    color: var(--teal-dark);
+    border: none;
+    padding: 0.5rem 1rem;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: var(--teal-dark);
+    color: white;
+}
+
+.medical-notes-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.edit-notes-container {
+    margin-top: 0.5rem;
+}
+
+#editMedicalNotesInput {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* About Page Styles */
+.features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.feature-item i {
+    font-size: 2rem;
+    color: var(--teal);
+}
+
+.feature-item h4 {
+    font-size: var(--text-lg);
+    margin-bottom: 0.5rem;
+}
+
+.feature-item p {
+    color: var(--text-medium);
+    margin: 0;
+}
+
+.stats-container {
+    padding: 2rem 0;
+}
+
+.stat-item {
+    margin-bottom: 2rem;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--teal);
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: var(--text-base);
+    color: var(--text-medium);
+}
+
+.contact-form label {
+    font-weight: 500;
+    color: var(--text-medium);
+}
+
+@media (max-width: 768px) {
+    .stat-item {
+        margin-bottom: 1.5rem;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+}
+
+/* Footer Styles */
+.footer {
+    background-color: var(--white);
+    border-top: 1px solid var(--teal-light);
+    padding: 3rem 0;
+    margin-top: auto;
+    /* This pushes footer to bottom */
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.footer-logo {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.footer-logo:hover {
+    transform: translateY(-2px);
+}
+
+.footer-title {
+    color: var(--text-dark);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.footer-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--teal);
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer-links a {
+    color: var(--text-medium);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer-links a:hover {
+    color: var(--teal);
+    transform: translateX(5px);
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--text-medium);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 0.5rem 0;
+}
+
+.social-link:hover {
+    color: var(--teal);
+    transform: translateX(5px);
+}
+
+.social-link i {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+}
+
+.copyright {
+    color: var(--text-muted);
+    font-size: var(--text-sm);
+    margin-top: 1rem;
+    border-top: 1px solid var(--teal-light);
+    padding-top: 1rem;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer {
+        padding: 2rem 0;
+    }
+
+    .footer-section {
+        text-align: center;
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+
+    .footer-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .social-links {
+        align-items: center;
+    }
+
+    .footer-links a:hover,
+    .social-link:hover {
+        transform: translateY(-2px);
+    }
+}
+
+/* Make sure body uses flex for sticky footer */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/* Navigation Hover Effects */
+.navbar .nav-link {
+    position: relative;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: var(--teal);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+    opacity: 0;
+}
+
+.navbar .nav-link:hover::after,
+.navbar .nav-link.active::after {
+    width: 80%;
+    opacity: 1;
+}
+
+.navbar .nav-link:hover {
+    color: var(--teal) !important;
+}
+
+/* Mobile Sidebar Navigation Effects */
+.sidebar-menu a {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.sidebar-menu a::before {
+    content: '';
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(32, 201, 151, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.sidebar-menu a:hover::before {
+    left: 100%;
+}
+
+.sidebar-menu a:hover i {
+    transform: translateX(5px);
+    transition: transform 0.3s ease;
+}
