@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="icon" href="/images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/script.js" defer></script>
+</head>
+
+<body>
+    <div class="registration-form">
+        <h2>Register</h2>
+        <div class="radio-group">
+            <label>
+                <input type="radio" name="role" value="doctor" onclick="updatePlaceholders()" required> Doctor
+            </label>
+            <label>
+                <input type="radio" name="role" value="patient" onclick="updatePlaceholders()" required> Patient
+            </label>
+        </div>
+        <form id="registration-form">
+            <!-- Dynamic form content will be inserted here -->
+        </form>
+        <p class="login-link">Already have an account? <a href="login.html">Login here</a></p>
+    </div>
+</body>
+
+</html>

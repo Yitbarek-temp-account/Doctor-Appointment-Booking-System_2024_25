@@ -1,0 +1,147 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    background-image: url('../images/hospital.png'); 
+    background-size: cover;
+    background-position: center;
+}
+
+.registration-form, .login-form {
+    background: transparent;
+    padding: 20px;
+    width: 30%;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.registration-form h2, .login-form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 40px;
+    color: white;
+}
+
+.input-group, .radio-group {
+    margin-bottom: 15px;
+}
+
+.input-group label, .radio-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+    font-weight: 600;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: 1px solid black;
+    background: transparent;
+}
+
+.radio-group label {
+    margin-right: 10px;
+}
+
+.submit-btn {
+    margin-left: 100px;
+    font-size: 20px;
+    width: 50%;
+    padding: 10px;
+    background-color: #007e85;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.submit-btn:hover {
+    background-color: #039ea6;
+}
+
+.required {
+    color: red;
+}
+
+.login-link, .register-link {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.login-link a, .register-link a {
+    color: yellow;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.login-link a:hover, .register-link a:hover {
+    text-decoration: underline;
+}
+
+.input-pair {
+    display: flex;
+    gap: 10px;
+}
+
+.input-pair .input-group {
+    flex: 1;
+}
+
+/* Media queries for responsiveness */
+
+@media (max-width: 600px) {
+    .registration-form, .login-form {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .registration-form h2, .login-form h2 {
+        font-size: 30px;
+    }
+
+    .submit-btn {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .input-pair {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+    .registration-form, .login-form {
+        width: 70%;
+    }
+
+    .registration-form h2, .login-form h2 {
+        font-size: 35px;
+    }
+
+    .submit-btn {
+        margin-left: 50px;
+        width: 60%;
+    }
+}
+
+@media (min-width: 768px) {
+    .registration-form, .login-form {
+        width: 30%;
+    }
+
+    .registration-form h2, .login-form h2 {
+        font-size: 40px;
+    }
+
+    .submit-btn {
+        margin-left: 100px;
+        width: 50%;
+    }
+}
