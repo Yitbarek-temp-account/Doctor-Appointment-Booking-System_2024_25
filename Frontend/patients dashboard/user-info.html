@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/user-info.css">
+</head>
+<body>
+    <header class="sticky-top py-3" style="background-color: #e6f0f7; border-bottom: 1px solid #1b283d;">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <img src="./Images/stethoscope.png" alt="stethoscope" width="30" class="me-2" />
+                <a href="./home.html" class="text-dark text-decoration-none fs-4 fw-bold">Doctor Directory</a>
+            </div>
+            <div>
+                <a href="./home.html" class="btn link-btn">Home</a>
+                <a href="./appointment.html" class="btn link-btn">My Appointment</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container mt-5 profile">
+        <div class="card p-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h4>Basic Info</h4>
+                <img src="./Images/person-3.png" alt="" width="100" height="100" class="rounded-circle">
+            </div>
+
+            <div class="row mb-3" id="first-name-row">
+                <label for="first-name-input" class="col-sm-3 col-form-label">First Name</label>
+                <div class="col-sm-9 d-flex justify-content-between align-items-center">
+                    <span id="first-name-value">John</span>
+                    <input type="text" class="form-control form-control-sm d-none" id="first-name-input" value="John">
+                    <button class="btn btn-link edit-button" onclick="startEditing('first-name')">Edit</button>
+                    <div class="d-none d-flex" id="first-name-buttons">
+                        <button class="btn btn-primary btn-sm me-2" onclick="saveEdit('first-name')">Save</button>
+                        <button class="btn btn-secondary btn-sm" onclick="cancelEdit('first-name')">Cancel</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-3" id="last-name-row">
+                <label for="last-name-input" class="col-sm-3 col-form-label">Last Name</label>
+                <div class="col-sm-9 d-flex justify-content-between align-items-center">
+                    <span id="last-name-value">Doe</span>
+                    <input type="text" class="form-control form-control-sm d-none" id="last-name-input" value="Doe">
+                    <button class="btn btn-link edit-button" onclick="startEditing('last-name')">Edit</button>
+                    <div class="d-none d-flex" id="last-name-buttons">
+                        <button class="btn btn-primary btn-sm me-2" onclick="saveEdit('last-name')">Save</button>
+                        <button class="btn btn-secondary btn-sm" onclick="cancelEdit('last-name')">Cancel</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-3" id="email-row">
+                <label for="email-input" class="col-sm-3 col-form-label">Email</label>
+                <div class="col-sm-9 d-flex justify-content-between align-items-center">
+                    <span id="email-value">john.doe@example.com</span>
+                    <input type="text" class="form-control form-control-sm d-none" id="email-input" value="john.doe@example.com">
+                    <button class="btn btn-link edit-button" onclick="startEditing('email')">Edit</button>
+                    <div class="d-none d-flex" id="email-buttons">
+                        <button class="btn btn-primary btn-sm me-2" onclick="saveEdit('email')">Save</button>
+                        <button class="btn btn-secondary btn-sm" onclick="cancelEdit('email')">Cancel</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-3" id="gender-row">
+                <label for="gender-input" class="col-sm-3 col-form-label">Gender</label>
+                <div class="col-sm-9 d-flex justify-content-between align-items-center">
+                    <span id="gender-value">Female</span>
+                    <input type="text" class="form-control form-control-sm d-none" id="gender-input" value="Female">
+                    <button class="btn btn-link edit-button" onclick="startEditing('gender')">Edit</button>
+                    <div class="d-none d-flex" id="gender-buttons">
+                        <button class="btn btn-primary btn-sm me-2" onclick="saveEdit('gender')">Save</button>
+                        <button class="btn btn-secondary btn-sm" onclick="cancelEdit('gender')">Cancel</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-3" id="dob-row">
+                <label for="dob-input" class="col-sm-3 col-form-label">Date of Birth</label>
+                <div class="col-sm-9 d-flex justify-content-between align-items-center">
+                    <span id="dob-value">2025-01-22</span>
+                    <input type="text" class="form-control form-control-sm d-none" id="dob-input" value="2025-01-22">
+                    <button class="btn btn-link edit-button" onclick="startEditing('dob')">Edit</button>
+                    <div class="d-none d-flex" id="dob-buttons">
+                        <button class="btn btn-primary btn-sm me-2" onclick="saveEdit('dob')">Save</button>
+                        <button class="btn btn-secondary btn-sm" onclick="cancelEdit('dob')">Cancel</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-3" id="contact-row">
+                <label for="contact-input" class="col-sm-3 col-form-label">Contact Number</label>
+                <div class="col-sm-9 d-flex justify-content-between align-items-center">
+                    <span id="contact-value">+1-555-123-4567</span>
+                    <input type="text" class="form-control form-control-sm d-none" id="contact-input" value="+1-555-123-4567">
+                    <button class="btn btn-link edit-button" onclick="startEditing('contact')">Edit</button>
+                    <div class="d-none d-flex" id="contact-buttons">
+                        <button class="btn btn-primary btn-sm me-2" onclick="saveEdit('contact')">Save</button>
+                        <button class="btn btn-secondary btn-sm" onclick="cancelEdit('contact')">Cancel</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-3" id="blood-group-row">
+                <label for="blood-group-input" class="col-sm-3 col-form-label">Blood Group</label>
+                <div class="col-sm-9 d-flex justify-content-between align-items-center">
+                    <span id="blood-group-value">O+</span>
+                    <input type="text" class="form-control form-control-sm d-none" id="blood-group-input" value="O+">
+                    <button class="btn btn-link edit-button" onclick="startEditing('blood-group')">Edit</button>
+                    <div class="d-none d-flex" id="blood-group-buttons">
+                        <button class="btn btn-primary btn-sm me-2" onclick="saveEdit('blood-group')">Save</button>
+                        <button class="btn btn-secondary btn-sm" onclick="cancelEdit('blood-group')">Cancel</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-end">
+                <span class="logout">
+                    <a href="#" class="btn red-btn">Logout</a>
+                </span>
+            </div>
+        </div>
+    </div>
+<script src="./javascript/bootstrap.bundle.min.js"></script>
+    <script src="./javascript/user-info.js"></script>
+</body>
+</html>
