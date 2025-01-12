@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="userlist.css">
+        <title>Document</title>
+        <link
+      href="assets/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="assets/bootstrap/js/bootstrap.min.js"
+    ></script>
+    </head>
+    <body style="margin: 0;">
+        <div class="admincontainer">
+            <div class="navbar">
+                <div class="left">
+                    <img src="image/download.logo1.png" alt="">
+                </div>
+                <div class="middle"><h1>Project Mangnment System</h1></div>
+                <div class="right"></div>
+            </div>
+            <div class="home">
+                <div class="sidebar">
+                    <div class="eachelemnt">
+                        <a href="projectlist.html"
+                            style="text-decoration: none; color: black;">Project
+                            list</a>
+                    </div>
+                    <div class="eachelemnt">
+                        <a href="addproject.html"
+                            style="text-decoration: none; color: black;">Add
+                            Project</a>
+
+                    </div>
+                    <div class="eachelemnt">
+                        <a href="userlist.html"
+                            style="text-decoration: none; color: black;"> User
+                            List</a>
+                    </div>
+                    <div class="eachelemnt">
+                        <a href="adduser.html"
+                            style="text-decoration: none; color: black;">Add
+                            User</a>
+
+                    </div>
+                </div>
+                <div class="content"><div>
+                        <table class="table">
+                            <thead class="table-light">
+                                <tr data-project-id="1">
+                                    <th scope="col-2" class="eachcol">Id</th>
+                                    <th scope="col-2" class="eachcol">First
+                                        Name</th>
+                                    <th scope="col-2" class="eachcol">Last
+                                        Name</th>
+                                    <th scope="col-2" class="eachcol">email</th>
+                                    <th scope="col-2" class="eachcol">Phone</th>
+                                    <th scope="col-2" class="eachcol">role</th>
+                                    <th scope="col-1" class="eachcol">Edit</th>
+                                    <th scope="col-1"
+                                        class="eachcol">Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="updateModal" class="my-custom-modal">
+                        <div class="modal-content">
+                            <span class="close-button" id="closeModal">&times;</span>
+                            <h2>Update Project</h2>
+                            <form id="updateForm">
+                                <div class="mb-3">
+                                    <label for="id"
+                                        class="form-label eachlabel">Id</label>
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="id"
+                                        placeholder="id" />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="firstname"
+                                        class="form-label eachlabel">First
+                                        Name</label>
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="firstname"
+                                        placeholder="Rediet" />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="lastname"
+                                        class="form-label eachlabel">Last
+                                        Name</label>
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="lastname"
+                                        placeholder="Rediet" />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="lastname"
+                                        class="form-label eachlabel">Email</label>
+                                    <input
+                                        type="email"
+                                        class="form-control"
+                                        id="email"
+                                        placeholder="Rediet@gmail.com" />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="phonenumber"
+                                        class="form-label eachlabel">Phone
+                                        Number</label>
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="phonenumber"
+                                        placeholder="097575748" />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="role"
+                                        class="form-label eachlabel">Role</label>
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="role"
+                                        placeholder="role" />
+                                </div>
+                                <button type="submit">Update User</button>
+                            </form>
+                        </div>
+                    </div>
+        <script src="dist/userList.js"></script>
+
+                </body>
+            </html>

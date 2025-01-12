@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="assets/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="assets/bootstrap/js/bootstrap.min.js"
+    ></script>
+  
+    
+<script>
+    
+      document.addEventListener('DOMContentLoaded', function () {
+        const isAuthenticated = localStorage.getItem('userToken');
+        const projectsLinkContainer = document.querySelector(
+          '.middle',
+        );
+        const projectsLink = document.getElementById('projects_link');;
+        const loginLink = document.getElementById('login_link');
+        const logout = document.getElementById('logout');
+
+if (isAuthenticated) {
+  logout.style.display
+  projectsLink.style.display ;
+  loginLink.style.display = 'none'; 
+} else {
+  
+  projectsLink.style.display = 'none';
+  loginLink.style.display ; 
+  logout.style.display = "none";
+}
+      });
+    </script>
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      .submitbutton {
+        background-color: black;
+        color: white;
+        text-align: center;
+        cursor: pointer;
+      }
+      .submitbutton a {
+        color: white;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="sectionone" id="home">
+      <div class="navbar">
+        <div class="left">
+          <img src="image/download.logo1.png" alt="">
+        </div>
+        <div class="middle">
+          <div class="links">
+            <a href="index.html"> Home </a>
+          </div>
+          <div class="links">
+            <a href="about.html"> About Us </a>
+          </div>
+          <div class="links">
+            <a href="contact.html"> Contact Us </a>
+          </div>
+          <div class="links" id = "projects_link">
+            <a href="projects.html"> Projects </a>
+          </div>
+        </div>
+        <div class="right">
+          <button type="button" class="btn submitbutton" id="login_link">
+            <a href="login.html" style="text-decoration: none;"> Login </a>
+          </button>
+          <button type="button"
+          class="btn submitbutton" id="logout">
+              Logout</button>
+        </div>
+      </div>
+    </section>
+    <section class="sectionfour" id="projects">
+      <div class="container text-center">
+        <h1>Projects</h1>
+        <div class="girdcontainer" id="projects-container">
+          
+      </div>
+    </section>
+    <script src="dist/logout.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', async function () {
+      
+        try {
+          const response = await fetch('http://localhost:3000/projects',{
+            headers: {
+              'Authorization': localStorage.getItem('userToken')
+            }
+          });
+          const projectsData = await response.json();
+          console.log(projectsData);
+          const projectsContainer =
+            document.getElementById('projects-container');
+
+          projectsData.forEach((project) => {
+            const projectElement = document.createElement('div');
+            projectElement.className = 'eachelemnt';
+            projectElement.innerHTML = `
+              <div class="card" style="width: 18rem">
+                <img src="./ECommerce.jpg" class="card-img-top" alt="..." />
+                <div class="card-body cardbody">
+                  <div class="cardbodytext">
+                    <h6>Title</h6>
+                    <p class="card-text">${project.title}</p>
+                  </div>
+                  <div class="cardbodytext">
+                    <h6>Description</h6>
+                    <p class="card-text">${project.description}</p>
+                  </div>
+                  <div class="cardbodytext">
+                    <h6>Manager</h6>
+                    <p class="card-text">${project.manager}</p>
+                  </div>
+                  <div class="cardbodytext">
+                    <h6>Start Date</h6>
+                    <p class="card-text">${project.startDate}</p>
+                  </div>
+                  <div class="cardbodytext">
+                    <h6>End Date</h6>
+                    <p class="card-text">${project.endDate}</p>
+                  </div>
+                </div>
+              </div>
+            `;
+
+            projectsContainer.appendChild(projectElement);
+          });
+        } catch (error) {
+          console.error('Error fetching projects:', error);
+        }
+      });
+    </script>
+  </body>
+</html>

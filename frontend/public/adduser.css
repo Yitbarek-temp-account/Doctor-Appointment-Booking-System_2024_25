@@ -1,0 +1,91 @@
+.editcontainer {
+  color: #112846;
+  font-family: 'Poppins', sans-serif;
+}
+.editwrapper {
+  background-color: #d9d9d9;
+  width: 600px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 10px;
+}
+.edittext {
+  text-align: center;
+}
+.mb-3 {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.eachlabel {
+  font-size: 24px;
+  flex: 1;
+}
+.form-control {
+  padding: 10px 15px;
+  flex: 1;
+}
+.submitbutton {
+  width: 100%;
+  padding: 10px 15px;
+  background-color: #112846;
+  color: white;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+}
+.admincontainer {
+  margin: 0px;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  background: white;
+  padding: 0px 20px;
+  border-bottom: 2px solid black;
+}
+.home {
+  display: flex;
+}
+.editcontent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 5;
+  background-color: white;
+}
+.sidebar {
+  flex: 1;
+  background-color: white;
+  height: calc(100vh - 60px);
+  padding: 30px 15px;
+  border-right: 2px solid black;
+}
+.middle {
+  font-family: 'Poppins', sans-serif;
+}
+.table {
+  width: 100%;
+}
+.eachelemnt {
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+.eachelemnt a {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+.eachcol {
+  width: 20%;
+  text-align: center;
+}
+.tablebody {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

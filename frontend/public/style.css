@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.sectionone {
+  overflow-x: hidden;
+  background-color: white;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  background: white;
+  padding: 0 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  border-bottom: 1px solid #112846;
+  color: #112846;
+}
+
+.left {
+  color: #112846;
+}
+
+.middle {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.links a {
+  text-decoration: none;
+  color: #000000;
+  padding: 10px 15px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.links a:hover {
+  background-color: #112846;
+  color: white;
+}
+
+.submitbutton {
+  background-color: #112846;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.submitbutton:hover {
+  background-color: #0d1f3c;
+  transform: scale(1.05);
+}
+
+.sectiontwo, .sectionthree, .sectionfour {
+  padding: 60px 20px;
+}
+
+.footer {
+  height: 250px;
+  background: #666666;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.eachelementfooter {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  gap: 20px;
+}

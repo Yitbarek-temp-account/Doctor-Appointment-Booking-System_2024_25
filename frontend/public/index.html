@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const isAuthenticated = localStorage.getItem('userToken');
+        const projectsLinkContainer = document.querySelector(
+          '.middle',
+        );
+        const projectsLink = document.getElementById('projects_link');;
+        const loginLink = document.getElementById('login_link');
+
+        if (isAuthenticated) {
+          
+          projectsLink.style.display ;
+          loginLink.style.display = 'block'; 
+        } else {
+          
+          projectsLink.style.display = 'none';
+          loginLink.style.display ; 
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <section class="sectionone" id="home">
+      <div class="navbar">
+        <div class="left"><img src="image/download.logo1.png" alt="Logo"></div>
+        <div class="middle">
+          <div class="links">
+            <a href="index.html"> Home </a>
+          </div>
+          <div class="links">
+            <a href="about.html"> About Us </a>
+          </div>
+          <div class="links">
+            <a href="contact.html"> Contact Us </a>
+          </div>
+          <div class="links" id="projects_link">
+            <a href="projects.html"> Projects </a>
+          </div>
+        </div>
+        <div class="right">
+          <div class="links" id="login_link">
+            <a href="login.html"> Login </a>
+          </div>
+        </div>
+      </div>
+      <div class="home mt-5"></div>
+      <div class="hometext container">
+        Project Hub where you track your project !
+      </div>
+      <div class="footer">
+        <div class="footerleft">
+          <h3>Contact us</h3>
+          <div>
+            <p>Face book</p>
+          </div>
+          <div>
+            <p>Linkden</p>
+          </div>
+          <div>
+            <p>Instagram</p>
+          </div>
+        </div>
+        <div class="footermiddle">
+          <h3>Services</h3>
+          <div>
+            <p>Make project from scratch</p>
+          </div>
+          <div>
+            <p>Consult on project</p>
+          </div>
+          <div>
+            <p>Review projects</p>
+          </div>
+        </div>
+        <div class="footerright">
+          <h3>Address</h3>
+          <div class="eachelementfooter">
+            <p>City</p>
+            <p>Addis Ababa</p>
+          </div>
+          <div class="eachelementfooter">
+            <p>Woreda</p>
+            <p>Arada</p>
+          </div>
+          <div class="eachelementfooter">
+            <p>Street</p>
+            <p>5 kilo</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

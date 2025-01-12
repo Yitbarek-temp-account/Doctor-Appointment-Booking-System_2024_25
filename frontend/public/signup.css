@@ -1,0 +1,69 @@
+.logincontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  color: #112846;
+}
+
+.loginwrapper {
+  width: 40%;
+  height: 75%;
+  background-color: #d9d9d9;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  border-radius: 10px;
+}
+
+.logintext {
+  text-align: center;
+}
+
+.mb-3 {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.eachlabel {
+  font-size: 24px;
+  flex: 1;
+}
+
+.form-control {
+  padding: 10px 15px;
+  flex: 1;
+}
+
+.submitbutton {
+  width: 100%;
+  padding: 10px 15px;
+  background-color: #112846;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.submitbutton:hover {
+  background-color: #0d1f3c;
+  transform: scale(1.05);
+}
+
+.submitbutton a {
+  color: white;
+}
+
+.change {
+  font-size: 14px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.change a {
+  color: blue;
+}
